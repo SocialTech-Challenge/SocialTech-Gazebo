@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+    <model name="CGMVanguard">
+        <link name="body">
+            <pose>0 0 0 0 0 1.5708</pose>
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cgmvanguard/2/files/meshes/CGMVanguard.obj</uri>
+                        <scale>0.01 0.01 0.01</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cgmvanguard/2/files/meshes/CGMVanguard.obj</uri>
+                        <scale>0.01 0.01 0.01</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+    </model>
+</sdf>

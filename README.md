@@ -20,7 +20,7 @@ Para no estar ejecutando estos dos comandos constantemente puedes ejecutar una v
 
 Para arrancar el entrono que se utilizará en la prueba 1 ejecuta el siguiente comando:
 
-    roslaunch SocialTech-Gazebo prueba1.launch 
+    roslaunch SocialTech-Gazebo loyola_test.launch 
 
 
 Una vez arrancado en otra terminal se puede ejecutar el nodo de teleoperación para comprobar que todo funciona bien. Este nodo permite mover el AGV por el escenario utilizando el teclado.

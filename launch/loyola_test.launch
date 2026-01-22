@@ -1,0 +1,59 @@
+<launch>
+  <arg name="world_name" default="$(find SocialTech-Gazebo)/worlds/Simple_l.world"/>
+    <arg name="x" default="-13.0"/>
+    <arg name="y" default="5.0"/>
+    <arg name="z" default="0.0"/>
+    <arg name="yaw" default="-1.570796"/>
+    
+    
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_name)"/>
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+    
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+
+    <param
+    name="robot_description"
+   command="$(find xacro)/xacro '$(find SocialTech-Gazebo)/urdf/tracer2.xacro'" />
+    
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-x $(arg x)
+              -y $(arg y)
+              -z $(arg z)
+              -Y $(arg yaw) 
+              -param robot_description -urdf -model tracer2"
+              
+    output="screen" />
+    
+
+
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+ 
+ <node
+    name="joint_state_publisher"
+    pkg="joint_state_publisher"
+    type="joint_state_publisher" />
+      
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find SocialTech-Gazebo)/rviz/model_display.rviz" />
+    
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+</launch>

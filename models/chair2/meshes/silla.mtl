@@ -1,0 +1,27 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl __brx__basics__brsw
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd silla/__brx__basics__brsw.jpg
+
+newmtl __brx__basics__brcrom
+Ka 0.000000 0.000000 0.000000
+Kd 0.678431 0.678431 0.678431
+Ks 0.330000 0.330000 0.330000
+
+newmtl __brx__basics__brsw1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd silla/__brx__basics__brsw1_.jpg
+
+newmtl __brx__basics__brla
+Ka 0.000000 0.000000 0.000000
+Kd 0.180392 0.196078 0.207843
+Ks 0.330000 0.330000 0.330000
+map_Kd silla/__brx__basics__brla.jpg
+
